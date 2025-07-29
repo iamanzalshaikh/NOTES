@@ -10,7 +10,7 @@ import notesRoutes from "./routes/notesRoutes.js"
 dotenv.config();
 
 const app = express();
-
+app.set("trust proxy", 1); 
 // Middleware
 app.use(cors({
     origin: ["http://localhost:5173", "https://notes-frontendtext-notes-frontend-my.onrender.com"],
