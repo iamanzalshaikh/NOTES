@@ -10,7 +10,7 @@ const UserContextProvider = ({ children }) => {
 
     const getCurrentUser = async () => {
         try {
-const res = await axios.get("https://notes-4oha.onrender.com/api/user/getCurrentUser", {
+const res = await axios.get(`${serverUrl}/api/user/getCurrentUser`, {
                 withCredentials: true,
             });
 
