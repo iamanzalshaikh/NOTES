@@ -7,6 +7,7 @@ export const UserDataContext = createContext();
 const UserContextProvider = ({ children }) => {
     const [userData, setUserData] = useState(null);
     const [loading, setLoading] = useState(true); // Default: true
+    const { serverUrl } = useContext(AuthContext);
 
     const getCurrentUser = async () => {
         try {
